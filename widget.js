@@ -5,6 +5,7 @@
 //   fat      -> fat ring (circular)
 //   carbs    -> carb ring (circular)
 //   tip      -> tip of the day (rectangular)
+//   rings    -> all four rings in one wide widget (rectangular)
 //   (inline widget above the clock ignores the parameter)
 
 const DATA_URL = "https://raw.githubusercontent.com/justinady80/macro-widget/main/today.json";
@@ -85,6 +86,38 @@ function buildCircular(w, data, which) {
   w.addSpacer();
 }
 
+// Four small rings (cal, protein, fat, carbs) drawn into one wide image.
+function fourRingsImage(data) {
+  const W = 170, H = 72, n = 4, d = 34, line = 4;
+  const ctx = new DrawContext();
+  ctx.size = new Size(W, H);
+  ctx.opaque = false;
+  ctx.respectScreenScale = true;
+  const keys = [["calories", "Cal"], ["protein", "P"], ["fat", "F"], ["carbs", "C"]];
+  const gap = (W - n * d) / n;
+  keys.forEach(([key, short], i) => {
+    const m = data.macros[key];
+    const x = gap / 2 + i * (d + gap);
+    const ring = ringImage(m.eaten / m.goal, d, line);
+    ctx.drawImageInRect(ring, new Rect(x, 0, d, d));
+    ctx.setTextColor(Color.white());
+    ctx.setFont(Font.boldSystemFont(9));
+    ctx.setTextAlignedCenter();
+    ctx.drawTextInRect(short, new Rect(x, d / 2 - 6, d, 12));
+    const left = m.goal - m.eaten;
+    ctx.setFont(Font.systemFont(9));
+    ctx.drawTextInRect(left >= 0 ? fmt(left) : "+" + fmt(-left), new Rect(x - gap / 2, d + 4, d + gap, 12));
+    ctx.setFont(Font.systemFont(7));
+    ctx.drawTextInRect(left >= 0 ? "left" : "over", new Rect(x - gap / 2, d + 16, d + gap, 10));
+  });
+  return ctx.getImage();
+}
+
+function buildRings(w, data) {
+  const img = w.addImage(fourRingsImage(data));
+  img.centerAlignImage();
+}
+
 function buildTip(w, data) {
   const c = data.macros.calories, p = data.macros.protein;
   const head = w.addText(
@@ -120,6 +153,7 @@ if (!data) {
   }
   if (family === "accessoryCircular") buildCircular(w, data, param);
   else if (family === "accessoryInline") buildInline(w, data);
+  else if (param === "rings") buildRings(w, data);
   else buildTip(w, data);
 }
 
