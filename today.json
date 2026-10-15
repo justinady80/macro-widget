@@ -1,13 +1,13 @@
 {
   "date": "2026-10-15",
-  "updated": "2026-10-16T00:00:00Z",
+  "updated": "2026-10-16T00:00:30Z",
   "macros": {
     "calories": {
-      "eaten": 2460,
+      "eaten": 2550,
       "goal": 2200
     },
     "protein": {
-      "eaten": 149,
+      "eaten": 169,
       "goal": 170
     },
     "fat": {
@@ -15,9 +15,9 @@
       "goal": 70
     },
     "carbs": {
-      "eaten": 236,
+      "eaten": 237,
       "goal": 220
     }
   },
-  "tip": "21 g protein short. A shake in water before bed closes the gap."
+  "tip": "Protein goal hit. Tomorrow: oats + prep meals keep you on target."
 }
