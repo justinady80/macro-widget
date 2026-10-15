@@ -119,17 +119,14 @@ function buildRings(w, data) {
 }
 
 function buildTip(w, data) {
-  const c = data.macros.calories, p = data.macros.protein;
-  const head = w.addText(
-    fmt(c.eaten) + "/" + fmt(c.goal) + " cal · " + fmt(p.eaten) + "/" + fmt(p.goal) + "g P"
-  );
-  head.font = Font.boldSystemFont(12);
-  head.minimumScaleFactor = 0.7;
-  head.lineLimit = 1;
+  // The rings widget already shows the numbers, so the tip gets the full space.
+  const head = w.addText("TIP");
+  head.font = Font.boldSystemFont(10);
+  head.textOpacity = 0.7;
   const tip = w.addText(data.tip || "");
-  tip.font = Font.systemFont(12);
-  tip.lineLimit = 2;
-  tip.minimumScaleFactor = 0.8;
+  tip.font = Font.systemFont(13);
+  tip.lineLimit = 3;
+  tip.minimumScaleFactor = 0.7;
 }
 
 function buildInline(w, data) {
