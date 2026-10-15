@@ -1,23 +1,23 @@
 {
   "date": "2026-10-15",
-  "updated": "2026-10-15T15:05:00Z",
+  "updated": "2026-10-15T23:55:00Z",
   "macros": {
     "calories": {
-      "eaten": 620,
+      "eaten": 2330,
       "goal": 2200
     },
     "protein": {
-      "eaten": 41,
+      "eaten": 129,
       "goal": 170
     },
     "fat": {
-      "eaten": 17,
+      "eaten": 101,
       "goal": 70
     },
     "carbs": {
-      "eaten": 79,
+      "eaten": 229,
       "goal": 220
     }
   },
-  "tip": "Pasta, bulgogi bowl and a shake tonight gets you to 170 g protein."
+  "tip": "41 g protein short. A shake in water before bed closes half of it."
 }
