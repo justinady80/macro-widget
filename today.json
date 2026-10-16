@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-15",
-  "updated": "2026-10-16T00:00:30Z",
+  "date": "2026-10-16",
+  "updated": "2026-10-16T17:20:00Z",
   "macros": {
     "calories": {
-      "eaten": 2550,
+      "eaten": 765,
       "goal": 2200
     },
     "protein": {
-      "eaten": 169,
+      "eaten": 46,
       "goal": 170
     },
     "fat": {
-      "eaten": 99,
+      "eaten": 25,
       "goal": 70
     },
     "carbs": {
-      "eaten": 237,
+      "eaten": 91,
       "goal": 220
     }
   },
-  "tip": "Protein goal hit. Tomorrow: oats + prep meals keep you on target."
+  "tip": "Pasta + bulgogi bowl + a shake gets you to ~160 g protein today."
 }
