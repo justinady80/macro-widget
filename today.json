@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-16",
-  "updated": "2026-10-17T01:42:00Z",
+  "date": "2026-10-17",
+  "updated": "2026-10-17T17:14:00Z",
   "macros": {
     "calories": {
-      "eaten": 2185,
+      "eaten": 570,
       "goal": 2200
     },
     "protein": {
-      "eaten": 159,
+      "eaten": 45,
       "goal": 170
     },
     "fat": {
-      "eaten": 82,
+      "eaten": 27,
       "goal": 70
     },
     "carbs": {
-      "eaten": 195,
+      "eaten": 39,
       "goal": 220
     }
   },
-  "tip": "Right on target today. Nice work, see you tomorrow."
+  "tip": "125 g protein to go. Build tonight around a lean protein + a shake."
 }
