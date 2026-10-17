@@ -1,23 +1,23 @@
 {
   "date": "2026-10-16",
-  "updated": "2026-10-16T17:20:00Z",
+  "updated": "2026-10-17T00:52:00Z",
   "macros": {
     "calories": {
-      "eaten": 765,
+      "eaten": 1335,
       "goal": 2200
     },
     "protein": {
-      "eaten": 46,
+      "eaten": 91,
       "goal": 170
     },
     "fat": {
-      "eaten": 25,
+      "eaten": 52,
       "goal": 70
     },
     "carbs": {
-      "eaten": 91,
+      "eaten": 130,
       "goal": 220
     }
   },
-  "tip": "Pasta + bulgogi bowl + a shake gets you to ~160 g protein today."
+  "tip": "Bulgogi bowl + a shake tonight gets you to ~160 g protein."
 }
